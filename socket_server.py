@@ -10,7 +10,7 @@ HEADER_LENGTH = 10
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
-# Defines relationship between socket and available addresses
+# Defines relationship between socket and address
 server_socket.bind((IP_address, port))
 
 # Instruct the server to be prepared to accept client connection requests

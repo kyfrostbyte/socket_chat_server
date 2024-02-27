@@ -1,7 +1,7 @@
 import socket
 import sys
 import threading
-import select
+from datetime import datetime
 import errno
 
 # Define IP, port, and header length
@@ -52,9 +52,11 @@ while True:
             message_length = int(message_header.decode('utf-8').strip())
             message = client_socket.recv(message_length).decode('utf-8')
 
+            timestamp = datetime.now().strftime("%I:%M %p")
+
             # Clear the line and print received messages
             print('\r\033[K', end='')
-            print(f"{username}: {message}")
+            print(f"{username} at {timestamp}: {message}")
 
             # Set flag to print prompt after processing messages
             print_prompt = True
