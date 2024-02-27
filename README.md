@@ -17,7 +17,7 @@ firewall settings in order to make it function across multiple networks.
 
 
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/KAcko3ACOzk)
 
 # Network Communication
 

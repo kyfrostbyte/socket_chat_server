@@ -1,4 +1,6 @@
 import socket
+import sys
+
 import select
 
 # Define IP, port, and header length
@@ -54,7 +56,8 @@ while True:
 
             # Handle user disconnect
             if user is False:
-                continue
+                print("Connection Error")
+                sys.exit()
 
             # Add new connections to socket list and client dictionary
             sockets_list.append(client_socket)
